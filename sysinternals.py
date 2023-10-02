@@ -25,8 +25,21 @@ def download_file(url, filename):
 
     print(f"\nDownloaded {os.path.basename(filename)} to 'Downloads' folder.")
 
+# Display a banner and prompt the user to start
+print(r"""
+ _____       __     __   _____  ___
+|_   _|     / _|    \ \ / /|  \/  |
+  | | _ __ | |_ ___  \ V / | .  . | __ ___  __
+  | || '_ \|  _/ _ \ /   \ | |\/| |/ _` \ \/ /
+ _| || | | | || (_) / /^\ \| |  | | (_| |>  <
+ \___/_| |_|_| \___/\/   \/\_|  |_/\__,_/_/\_\
+
+Sysinternals Downloader
+""")
+input("Press Enter to start :")
+
 # URL of the directory listing
-url = "https://live.sysinternals.com/"
+url = "https://live.sysinternals.com"
 
 # Send an HTTP GET request to fetch the HTML content of the directory listing
 response = requests.get(url)
